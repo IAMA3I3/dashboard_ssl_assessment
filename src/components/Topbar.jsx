@@ -21,6 +21,12 @@ const Topbar = ({ toggleNav }) => {
                 </div>
                 <div className=" flex flex-row-reverse justify-between md:flex-row gap-4 items-center">
                     <div className=" flex items-center gap-4">
+                        <form className=" hidden xl:block relative w-[282px] h-[48px] rounded-lg bg-[#FAFAFA] border border-[#D9D9D9] overflow-hidden">
+                            <button className=" absolute top-[50%] translate-y-[-50%] left-4">
+                                <ReactSVG src={Search} />
+                            </button>
+                            <input type="text" placeholder="Search..." className=" w-full h-full outline-none p-2 pl-12" name="" id="" />
+                        </form>
                         <div className=" xl:hidden">
                             <ReactSVG src={Search} />
                         </div>
@@ -43,6 +49,7 @@ const Topbar = ({ toggleNav }) => {
                     </div>
                 </div>
             </div>
+            <div className=" md:hidden"></div>
         </div>
     )
 }
