@@ -1,19 +1,23 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./screens/Home"
 import Navbar from "./components/Navbar"
-import About from "./screens/About"
+import Dashboard from "./screens/Dashboard"
+import Topbar from "./components/Topbar"
 
 const App = () => {
 
   return (
     <BrowserRouter>
-    
-      <Navbar />
 
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<About />} path="/about" />
-      </Routes>
+      <div className=" relative w-full min-h-screen block md:flex">
+        <Navbar />
+        <div className="">
+          <Topbar />
+
+          <Routes>
+            <Route element={<Dashboard />} path="/" />
+          </Routes>
+        </div>
+      </div>
 
     </BrowserRouter>
   )

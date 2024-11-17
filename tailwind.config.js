@@ -22,6 +22,9 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
+      },
+      colors: {
+        'app-primary': '#6C5DD3',
       }
     },
   },
