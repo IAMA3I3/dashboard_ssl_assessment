@@ -25,6 +25,10 @@ module.exports = {
       },
       colors: {
         'app-primary': '#6C5DD3',
+      },
+      fontFamily: {
+        crete: ['"Crete Round"', 'serif'],
+        inter: ['Inter', 'sans-serif'],
       }
     },
   },
