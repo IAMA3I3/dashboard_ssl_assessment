@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import '@fontsource/crete-round'
 import '@fontsource/inter'
 import Navbar from "./components/Navbar"
 import Dashboard from "./screens/Dashboard"
 import Topbar from "./components/Topbar"
+import ReactGA from "react-ga4"
+import AnalyticsTracker from "./components/AnalyticsTracker"
 
 const App = () => {
 
@@ -14,8 +16,13 @@ const App = () => {
     setOpenNav(!openNav)
   }
 
+  useEffect(() => {
+    ReactGA.send("pageview"); // Sends pageview for the current page
+  }, []);
+
   return (
     <BrowserRouter>
+    <AnalyticsTracker />
 
       <div className=" relative w-full min-h-screen block md:flex">
 
