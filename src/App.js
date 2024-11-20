@@ -21,7 +21,7 @@ const App = () => {
 
         <Navbar openNav={openNav} toggleNav={toggleNav} />
 
-        <div className=" flex-1">
+        <div className=" flex-1 h-screen overflow-y-auto scrollbar">
           <Topbar toggleNav={toggleNav} />
 
           <Routes>

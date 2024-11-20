@@ -11,7 +11,7 @@
   }
   .scrollbar::-webkit-scrollbar,
   html::-webkit-scrollbar {
-    @apply w-1 bg-gray-400
+    @apply w-1 h-1 bg-gray-400
   }
   .scrollbar::-webkit-scrollbar {
     @apply rounded-full
@@ -20,4 +20,13 @@
   html::-webkit-scrollbar-thumb {
     @apply rounded-full bg-gray-800
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* WebKit browsers */
+}
+
 }
